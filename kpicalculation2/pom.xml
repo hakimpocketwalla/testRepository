@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cec.water</groupId>
+  <artifactId>kpicalculation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>cec_kpi</name>
+  <description>kpicalculate</description>
+  
+  <properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<encoding>UTF-8</encoding>
+		<scala.version>2.11.8</scala.version>
+		<scala.compat.version>2.11</scala.compat.version>
+ </properties>
+<build>
+  <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>3.0.1</version>
+            <executions>
+<!--                   <execution> -->
+<!--                         <id>scala-compile-first</id> -->
+<!--                         <phase>process-resources</phase> -->
+<!--                         <goals> -->
+<!--                             <goal>add-source</goal> -->
+<!--                               <goal>compile</goal> -->
+<!--                         </goals> -->
+<!--                   </execution> -->
+<!--                   <execution> -->
+<!--                         <id>scala-test-compile</id> -->
+<!--                         <phase>process-test-resources</phase> -->
+<!--                         <goals> -->
+<!--                     <goal>testCompile</goal> -->
+<!--                         </goals> -->
+<!--                   </execution> -->
+            </executions>
+     </plugin>
+    </plugins>
+  </build>
+   <dependencies>
+  <!-- <dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-sql_2.10</artifactId>
+    <version>1.6.3</version>
+</dependency>
+<dependency>
+    <groupId>com.databricks</groupId>
+    <artifactId>spark-csv_2.10</artifactId>
+    <version>1.5.0</version>
+</dependency> -->
+<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-sql_2.11</artifactId>
+    <version>2.1.1</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.spark</groupId>
+	<artifactId>spark-hive_2.11</artifactId>
+	<version>2.1.1</version>
+</dependency> 
+
+<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>2.11.8</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.2.1</version>
+</dependency>
+
+<dependency>
+    <groupId>com.databricks</groupId>
+    <artifactId>spark-xml_2.11</artifactId>
+    <version>0.4.1</version>
+</dependency>		
+	
+<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-catalyst 
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-catalyst_2.11</artifactId>
+    <version>2.1.0</version>
+    <scope>test</scope>
+</dependency> -->
+	
+</dependencies>
+</project>
